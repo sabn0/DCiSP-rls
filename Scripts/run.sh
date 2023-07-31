@@ -5,7 +5,7 @@
   # data = path to folder made jsons + meta
   # corpus = path to corpus of heb sentences in conll format
 
-# exit if error state
+# exit if error
 set -e
 
 # env versions
