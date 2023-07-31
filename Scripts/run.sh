@@ -18,7 +18,6 @@ echo -e "${r_version}\n"
 data_dir=$1;
 corpus_file=$2;
 spr_sentences="${data_dir}/Meta/spr.parsed";
-i_files_dir="IFiles"
 
 # loactions of figure prep
 # json files with df (main data)
@@ -28,6 +27,7 @@ df_exp="${data_dir}/Experience.json"
 
 # make intermediate files
 # create directory for files
+i_files_dir="IFiles"
 if [ ! -d "./${i_files_dir}" ]; then
   mkdir ${i_files_dir}
 fi
