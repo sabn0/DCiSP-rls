@@ -3,7 +3,8 @@
 ## Overview
 Code for data visualization and statistical analyses in the thesis (). \
 The project is about changes in syntactic predictions of humans after reading exposures, and the interactions between those human predictions and
-NLP language models (GPT) outputs, in hebrew. The code runs all the figures, tables and appendices in the document with minor changes.
+NLP language models (GPT) outputs, in hebrew. \
+The code runs all the figures, tables and appendices in the document with minor changes.
 
 ## How to run (Linux)
 - prerequisites: python >= 3.8, R.
@@ -16,7 +17,7 @@ pip install --upgrade pip;
 pip install -r requirements.txt;
 ```
 - Now, the analyses can be run from the .sh script within the Scripts folder as follows: \
-```bash Scripts/run.sh m PATH_TO_DATA PATH_TO_CORPUS```
+```bash Scripts/run.sh PATH_TO_DATA PATH_TO_CORPUS```
 
 - PATH_TO_DATA (mandatory) : json files of the raw data (not released here).
 - PATH_TO_CORPUS (optional) : a hebrew corpus in a conll format. I used the corpus from [here](https://u.cs.biu.ac.il/~yogo/hebwiki/). \
