@@ -1,0 +1,12 @@
+{"font_size": 25,
+  "x_label": "",
+  "y_label": "Surprisal",
+  "set_yticks": [0,2,4,6,8],
+  "regions": true,
+  "set_xticks_ORC": ["MainNP", "E.Noun", "-", "E.Verb", "MainVerb"],
+  "set_xticks_SRC": ["MainNP", "E.Verb", "ET", "E.Noun", "MainVerb"],
+  "color": {"ORC": "#FF0000", "SRC": "#3399FF"},
+  "orc_skip": [1,3],
+  "title": "Probability-based",
+  "out_path": "",
+  "legend_loc": "upper right"}

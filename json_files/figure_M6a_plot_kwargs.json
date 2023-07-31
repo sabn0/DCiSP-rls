@@ -1,0 +1,7 @@
+{"x": "Session",
+  "order": ["Before", "After"],
+  "y": "WordReactionTime",
+  "hue": "SentenceType",
+  "hue_order":  ["ORC", "SRC"],
+  "palette": {"ORC": "#FF0000", "SRC": "#3399FF", "Filler": "#808080"},
+  "dodge": false}

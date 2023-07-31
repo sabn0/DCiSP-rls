@@ -1,0 +1,9 @@
+{"x": "SentenceType",
+  "y": "AvgWordReactionTime",
+  "hue": "Group",
+  "palette": {"RC-enriched": "#E67828", "Control": "#46DCE6"},
+  "color": null,
+  "units": "SubjectNumber",
+  "estimator": null,
+  "style":  null,
+  "twinx": false}

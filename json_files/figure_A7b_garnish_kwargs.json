@@ -1,0 +1,8 @@
+{"font_size": 25,
+  "x_label": "",
+  "y_label": ["Avg RT (ms)", "Prediction"],
+  "set_yticks": [[600, 700, 800, 900,1000,1100], [0.5,1,1.5,2,2.5,3]],
+    "set_xticks": ["Main NP", "E.Verb", "ET+E.Noun", "Main verb", "Next word"],
+  "title": "",
+  "out_path": "",
+  "legend_loc": "upper right"}

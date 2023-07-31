@@ -1,0 +1,7 @@
+{"x": "ComplexIndex",
+  "order": null,
+  "y": "Syntactic",
+  "hue": "SentenceType",
+  "hue_order":  ["ORC", "SRC"],
+  "palette": {"ORC": "#FF0000", "SRC": "#3399FF"},
+  "dodge": 0.05}

@@ -1,0 +1,10 @@
+{"x": "WordIndex",
+  "y": ["Avg RT (ms)", "Prediction"],
+  "color": ["#3399FF", "#A0A0A0"],
+  "hue": null,
+  "palette": null,
+  "linestyles": "-",
+  "dodge":  0.0,
+  "units":  null,
+  "estimator": "mean",
+"grid": "white"}

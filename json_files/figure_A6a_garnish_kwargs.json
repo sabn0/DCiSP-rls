@@ -1,0 +1,8 @@
+{"font_size": 50,
+  "x_label": "WM score",
+  "y_label": "Delta of avg RT (ms)",
+  "set_xticks": null,
+  "set_yticks": [-1000, -500, 0, 500, 1000],
+  "title": "",
+  "out_path": "",
+  "legend_loc": null}

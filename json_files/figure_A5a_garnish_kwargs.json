@@ -1,0 +1,7 @@
+{"font_size": 50,
+  "x_label": "",
+  "y_label": "% Accuracy",
+  "set_yticks": [0.0, 0.2, 0.4, 0.6, 0.8, 1.0],
+  "title": "RC-enriched",
+  "out_path": "",
+  "legend_loc": "lower right"}

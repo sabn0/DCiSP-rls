@@ -1,0 +1,7 @@
+{"font_size": 50,
+  "x_label": "",
+  "y_label": "Avg RT (ms)",
+  "set_yticks": [400, 600, 800, 1000],
+  "title": "Control",
+  "out_path": "",
+  "legend_loc": "upper right"}
