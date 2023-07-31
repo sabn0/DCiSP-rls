@@ -9,7 +9,7 @@
 set -e
 
 # env versions
-py_version=$(python --version)
+py_version=$(python3 --version)
 r_version=$(R --version)
 echo -e "using ${py_version}\n"
 echo -e "${r_version}\n"
@@ -58,26 +58,26 @@ wm_merged="${i_files_dir}/merged_wm.json"
 echo "files preprocessing"
 echo "MLE creation - ngrams if not exists"
 if [ ! -f "./${ngram_mle_json}" ]; then
-  python RunMLE.py -c=${corpus_file} -s=${spr_sentences} -n=3 -m=Ngrams -o=${ngram_mle_json} -q=${q_mle} -e=${e_mle};
+  python3 RunMLE.py -c=${corpus_file} -s=${spr_sentences} -n=3 -m=Ngrams -o=${ngram_mle_json} -q=${q_mle} -e=${e_mle};
 fi
 
 echo "MLE creation - lm if not exists"
 if [ ! -f "./${lm_json}" ]; then
-  python RunMLE.py -s=${spr_sentences} -n=1 -m=LM -o=${lm_json};
+  python3 RunMLE.py -s=${spr_sentences} -n=1 -m=LM -o=${lm_json};
 fi
 
 echo "Megre lm data with spr if not exists"
 if [ ! -f "./${lm_merged}" ]; then
-  python Merge.py -a=${df_spr} -b=${lm_json} -o=${lm_merged} -m=SUP;
+  python3 Merge.py -a=${df_spr} -b=${lm_json} -o=${lm_merged} -m=SUP;
 fi
 
 echo "Merge wm data with spr if not exists"
 if [ ! -f "./${wm_merged}" ]; then
-  python Merge.py -a=${df_spr} -b=${df_wm} -o=${wm_merged} -m=WM;
+  python3 Merge.py -a=${df_spr} -b=${df_wm} -o=${wm_merged} -m=WM;
 fi
 
 echo "Make outliers rejected csvs from jsons"
-python MakeCSV.py -a=${df_spr} -b=${df_exp} -c=${df_wm} -o=${i_files_dir};
+python3 MakeCSV.py -a=${df_spr} -b=${df_exp} -c=${df_wm} -o=${i_files_dir};
 
 #plots
 echo "plot figures, appendices and tables"
@@ -90,7 +90,7 @@ echo "figure M3 is a diagram, skip"
 
 fig="M4"
 echo "figure ${fig}"
-python CreateFigure.py \
+python3 CreateFigure.py \
   -d=${df_spr} \
   -o=${o_images_dir} \
   -r=${rejections} \
@@ -101,7 +101,7 @@ python CreateFigure.py \
 
 fig="M5"
 echo "figure ${fig}a"
-python CreateFigure.py \
+python3 CreateFigure.py \
   -d=${ngram_mle_json} \
   -o=${o_images_dir} \
   -l=: \
@@ -109,7 +109,7 @@ python CreateFigure.py \
   -i="json_files/figure_${fig}a_plot_kwargs.json" \
   -j="json_files/figure_${fig}a_garnish_kwargs.json";
 echo "figure ${fig}b"
-python CreateFigure.py \
+python3 CreateFigure.py \
   -d=${lm_json} \
   -o=${o_images_dir} \
   -l=: \
@@ -119,7 +119,7 @@ python CreateFigure.py \
 
 fig="M6"
 echo "figure ${fig}a"
-python CreateFigure.py \
+python3 CreateFigure.py \
   -d=${df_spr} \
   -o=${o_images_dir} \
   -r=${rejections} \
@@ -128,7 +128,7 @@ python CreateFigure.py \
   -i="json_files/figure_${fig}a_plot_kwargs.json" \
   -j="json_files/figure_${fig}a_garnish_kwargs.json";
 echo "figure ${fig}b"
-python CreateFigure.py \
+python3 CreateFigure.py \
   -d=${df_spr} \
   -o=${o_images_dir} \
   -r=${rejections} \
@@ -147,7 +147,7 @@ echo "figure A4 is a text, skip"
 
 fig="A5"
 echo "figure ${fig}a"
-python CreateFigure.py \
+python3 CreateFigure.py \
   -d=${df_spr} \
   -o=${o_images_dir} \
   -r=${rejections} \
@@ -156,7 +156,7 @@ python CreateFigure.py \
   -i="json_files/figure_${fig}a_plot_kwargs.json" \
   -j="json_files/figure_${fig}a_garnish_kwargs.json";
 echo "figure ${fig}b"
-python CreateFigure.py \
+python3 CreateFigure.py \
   -d=${df_spr} \
   -o=${o_images_dir} \
   -r=${rejections} \
@@ -167,7 +167,7 @@ python CreateFigure.py \
 
 fig="A6"
 echo "figure ${fig}a"
-python CreateFigure.py \
+python3 CreateFigure.py \
   -d=${wm_merged} \
   -o=${o_images_dir} \
   -r=${rejections} \
@@ -176,7 +176,7 @@ python CreateFigure.py \
   -i="json_files/figure_${fig}a_plot_kwargs.json" \
   -j="json_files/figure_${fig}a_garnish_kwargs.json";
 echo "figure ${fig}b"
-python CreateFigure.py \
+python3 CreateFigure.py \
   -d=${wm_merged} \
   -o=${o_images_dir} \
   -r=${rejections} \
@@ -187,7 +187,7 @@ python CreateFigure.py \
 
 fig="A7"
 echo "figure ${fig}a"
-python CreateFigure.py \
+python3 CreateFigure.py \
   -d=${df_spr} \
   -o=${o_images_dir} \
   -r=${rejections} \
@@ -196,7 +196,7 @@ python CreateFigure.py \
   -i="json_files/figure_${fig}a_plot_kwargs.json" \
   -j="json_files/figure_${fig}a_garnish_kwargs.json";
 echo "figure ${fig}b"
-python CreateFigure.py \
+python3 CreateFigure.py \
   -d=${df_spr} \
   -o=${o_images_dir} \
   -r=${rejections} \
@@ -206,11 +206,11 @@ python CreateFigure.py \
   -j="json_files/figure_${fig}b_garnish_kwargs.json";
 
 echo "figure A8a A8b A9a A9b"
-python CreateDeps.py -o=${o_images_dir};
+python3 CreateDeps.py -o=${o_images_dir};
 
 fig="A10"
 echo "figure ${fig}a"
-python CreateFigure.py \
+python3 CreateFigure.py \
   -d=${lm_merged} \
   -o=${o_images_dir} \
   -r=${rejections} \
@@ -219,7 +219,7 @@ python CreateFigure.py \
   -i="json_files/figure_${fig}a_plot_kwargs.json" \
   -j="json_files/figure_${fig}a_garnish_kwargs.json";
 echo "figure ${fig}b"
-python CreateFigure.py \
+python3 CreateFigure.py \
   -d=${lm_merged} \
   -o=${o_images_dir} \
   -r=${rejections} \
@@ -229,7 +229,7 @@ python CreateFigure.py \
   -j="json_files/figure_${fig}b_garnish_kwargs.json";
 
 echo "table 1"
-python CountRC.py -i=${corpus_file} -o=${rc_counts_out};
+python3 CountRC.py -i=${corpus_file} -o=${rc_counts_out};
 
 echo "table 2"
 Rscript --vanilla LMER/exp_analysis.R ${csv_exp};
