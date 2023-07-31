@@ -22,9 +22,9 @@ i_files_dir="IFiles"
 
 # loactions of figure prep
 # json files with df (main data)
-df_spr="${i_files_dir}/Spr.json"
-df_wm="${i_files_dir}/WM.json"
-df_exp="${i_files_dir}/Experience.json"
+df_spr="${data_dir}/Spr.json"
+df_wm="${data_dir}/WM.json"
+df_exp="${data_dir}/Experience.json"
 
 # make intermediate files
 # create directory for files
