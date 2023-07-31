@@ -23,5 +23,5 @@ pip install -r requirements.txt;
 If not given, sections that use the corpus will be skipped.
 
 ## Software
-I used python 3.8, see the packages in the [requirements.txt file](https://github.com/sabn0/SPIH/blob/main/requirements.txt). \
+I used python 3.8, see the packages in the [requirements.txt file](https://github.com/sabn0/DCiSP-rls/blob/main/requirements.txt). \
 I used R 3.4.4 and the lme4 package.
