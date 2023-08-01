@@ -1,7 +1,7 @@
 # Dynamic changes in syntactic processing
 
 ## Overview
-Code for data visualization and statistical analyses in DCiSP project [a](https://thesiscommons.org/8djwp/). \
+Code for data visualization and statistical analyses in [DCiSP project](https://thesiscommons.org/8djwp/). \
 The project is about changes in syntactic predictions of humans after reading exposures, and the interactions between those human predictions and
 NLP language models (GPT) outputs, in hebrew. \
 The code runs all the figures, tables and appendices in the document with minor changes.
